@@ -1,0 +1,13 @@
+[book]
+authors = ["hellowac"]
+language = "en"
+multilingual = false
+src = "src"
+title = "n"
+
+[build]
+build.dir = "docs"
+
+[output.html.fold]
+enable = true
+level = 0
