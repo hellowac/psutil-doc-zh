@@ -6,7 +6,7 @@ src = "src"
 title = "n"
 
 [build]
-build.dir = "docs"
+build-dir = "docs"
 
 [output.html.fold]
 enable = true
