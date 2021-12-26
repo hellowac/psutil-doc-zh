@@ -3,7 +3,7 @@ authors = ["hellowac"]
 language = "en"
 multilingual = false
 src = "src"
-title = "n"
+title = "psutil-文档-中文版"
 
 [build]
 build-dir = "docs"
