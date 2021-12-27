@@ -145,9 +145,9 @@
                     <main>
                         <h1 id="迭代进程"><a class="header" href="#迭代进程">迭代进程</a></h1>
 <p><strong>psutil.process_iter(attrs=None, ad_value=None)</strong> - 原文 <a name="psutil.process_iter"></a></p>
-<p>返回一个迭代器，为本地机器上的所有正在运行的进程产生一个 <a href="/processes/process_class/index.html" title="进程类">Process</a> 类实例。 这应该优于 <a href="/processes/functions/pids.html" title="进程ID列表">psutil.pids()</a> 来迭代进程，因为它不受竞争条件的影响。</p>
-<p>每个 <a href="/processes/process_class/index.html" title="进程类">Process</a> 实例只创建一次，然后在下次调用 <a href="/processes/functions/process_iter.html" title="迭代进程">psutil.process_iter()</a> 时缓存（如果 PID 仍然存在）。 它还确保进程 PID 不被重用。</p>
-<p><em><strong>attrs</strong></em> 和 <em><strong>ad_value</strong></em> 与 <a href="/processes/process_class/as_dict.html" title="字典信息">Process.as_dict()</a> 具有相同的含义。 如果指定了 <em><strong>attrs</strong></em> ，则 <a href="/processes/process_class/as_dict.html" title="字典信息">Process.as_dict()</a> 结果将存储为附加到返回的 <a href="/processes/process_class/index.html" title="进程类">Process</a> 实例的 <code>info</code> 属性。 如果 <em><strong>attrs</strong></em> 是一个空列表，它将检索所有进程信息（比较慢）。</p>
+<p>返回一个迭代器，为本地机器上的所有正在运行的进程产生一个 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 类实例。 这应该优于 <a href="/psutil_doc/processes/functions/pids.html" title="进程ID列表">psutil.pids()</a> 来迭代进程，因为它不受竞争条件的影响。</p>
+<p>每个 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 实例只创建一次，然后在下次调用 <a href="/psutil_doc/processes/functions/process_iter.html" title="迭代进程">psutil.process_iter()</a> 时缓存（如果 PID 仍然存在）。 它还确保进程 PID 不被重用。</p>
+<p><em><strong>attrs</strong></em> 和 <em><strong>ad_value</strong></em> 与 <a href="/psutil_doc/processes/process_class/as_dict.html" title="字典信息">Process.as_dict()</a> 具有相同的含义。 如果指定了 <em><strong>attrs</strong></em> ，则 <a href="/psutil_doc/processes/process_class/as_dict.html" title="字典信息">Process.as_dict()</a> 结果将存储为附加到返回的 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 实例的 <code>info</code> 属性。 如果 <em><strong>attrs</strong></em> 是一个空列表，它将检索所有进程信息（比较慢）。</p>
 <p>返回进程的排序顺序基于它们的 PID。</p>
 <p>例子:</p>
 <pre><code class="language-python">&gt;&gt;&gt; import psutil
@@ -199,20 +199,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

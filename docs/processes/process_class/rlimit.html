@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="资源限制"><a class="header" href="#资源限制">资源限制</a></h1>
 <p><strong>Process.rlimit(resource, limits=None)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.rlimit">原文</a> <a name="Process.rlimit" ></a></p>
-<p>读写进程资源限制(参见 <a href="https://linux.die.net/man/2/prlimit" title="prlimit">prlimit</a> 手册)。 <em><strong>resource</strong></em> 是 <a href="/constants/process_source.html" title="进程资源常量">psutil.RLIMIT_*</a>常量之一。 <em><strong>limits</strong></em> 是一个 <code>(soft, hard)</code> 元组。本函数作用与 <a href="https://docs.python.org/3/library/resource.html#resource.getrlimit" title="resource.getrlimit">resource.getrlimit</a> 和 <a href="https://docs.python.org/3/library/resource.html#resource.getrlimit" title="resource.getrlimit">resource.getrlimit</a> 一样，不过本函数可以作用于任何进程PID，不仅仅是 <a href="https://docs.python.org/3/library/os.html#os.getpid" title="os.getpid">os.getpid</a>所获取的 。读时，返回值是一个 <code>(soft, hard)</code> 元组。每个值可以是 整数 或 <a href="/constants/process_source.html" title="进程资源常量">psutil.RLIMIT_*</a>。 例子：</p>
+<p>读写进程资源限制(参见 <a href="https://linux.die.net/man/2/prlimit" title="prlimit">prlimit</a> 手册)。 <em><strong>resource</strong></em> 是 <a href="/psutil_doc/constants/process_source.html" title="进程资源常量">psutil.RLIMIT_*</a>常量之一。 <em><strong>limits</strong></em> 是一个 <code>(soft, hard)</code> 元组。本函数作用与 <a href="https://docs.python.org/3/library/resource.html#resource.getrlimit" title="resource.getrlimit">resource.getrlimit</a> 和 <a href="https://docs.python.org/3/library/resource.html#resource.getrlimit" title="resource.getrlimit">resource.getrlimit</a> 一样，不过本函数可以作用于任何进程PID，不仅仅是 <a href="https://docs.python.org/3/library/os.html#os.getpid" title="os.getpid">os.getpid</a>所获取的 。读时，返回值是一个 <code>(soft, hard)</code> 元组。每个值可以是 整数 或 <a href="/psutil_doc/constants/process_source.html" title="进程资源常量">psutil.RLIMIT_*</a>。 例子：</p>
 <pre><code class="language-python">&gt;&gt;&gt; import psutil
 &gt;&gt;&gt; p = psutil.Process()
 &gt;&gt;&gt; p.rlimit(psutil.RLIMIT_NOFILE, (128, 128))   # process can open max 128 file descriptors
@@ -187,20 +187,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

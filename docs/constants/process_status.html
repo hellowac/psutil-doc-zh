@@ -160,7 +160,7 @@
 <li>psutil.<strong>STATUS_LOCKED)</strong>(<em>FreeBSD</em>)</li>
 <li>psutil.<strong>STATUS_WAITING)</strong>(<em>FreeBSD</em>)</li>
 <li>psutil.<strong>STATUS_SUSPENDED)</strong>(<em>NetBSD</em>
-表示进程状态。 由 <a href="/processes/process_class/status.html" title="进程状态">psutil.Process.status()</a> 返回。
+表示进程状态。 由 <a href="/psutil_doc/processes/process_class/status.html" title="进程状态">psutil.Process.status()</a> 返回。
 <em>3.4.1 版本中新增: STATUS_SUSPENDED (NetBSD).</em>
 <em>5.4.7 版本中新增: STATUS_PARKED (Linux).</em></li>
 </ul>
@@ -194,20 +194,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

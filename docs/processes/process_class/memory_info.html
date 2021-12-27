@@ -179,8 +179,8 @@ pmem(rss=15491072, vms=84025344, shared=5206016, text=2555904, lib=0, data=98918
 </code></pre>
 <p><em>4.0.0 版本中修改: 多个字段返回, 不仅仅是 <strong>rss</strong> 和 <strong>vms</strong>.</em></p>
 <p><strong>Process.memory_info_ex()</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.memory_info_ex">原文</a> <a name="Process.memory_info_ex" ></a></p>
-<p>与 <a href="/processes/process_class/memory_info.html" title="内存信息">memory_info()</a> 相同（已弃用）。</p>
-<p>*<strong>⚠️警告</strong>:<em>在 4.0.0 版本中已弃用；使用 <a href="/processes/process_class/memory_info.html" title="内存信息">memory_info()</a> 替换.</em></p>
+<p>与 <a href="/psutil_doc/processes/process_class/memory_info.html" title="内存信息">memory_info()</a> 相同（已弃用）。</p>
+<p>*<strong>⚠️警告</strong>:<em>在 4.0.0 版本中已弃用；使用 <a href="/psutil_doc/processes/process_class/memory_info.html" title="内存信息">memory_info()</a> 替换.</em></p>
 
                     </main>
 
@@ -211,20 +211,6 @@ pmem(rss=15491072, vms=84025344, shared=5206016, text=2555904, lib=0, data=98918
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

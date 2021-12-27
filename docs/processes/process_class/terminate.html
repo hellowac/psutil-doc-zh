@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="终止进程"><a class="header" href="#终止进程">终止进程</a></h1>
 <p><strong>Process.terminate()</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.terminate">原文</a> <a name="Process.terminate" ></a></p>
-<p>使用 SIGTERM 信号预先检查 PID 是否已被重用终止进程。 在 UNIX 上，这与 <code>os.kill(pid, signal.SIGTERM)</code> 相同。 在 Windows 上，这是 <a href="/processes/process_class/kill.html" title="杀死进程">kill()</a> 的别名。 另请参阅如何<a href="/recipes/kill_process_tree.html" title="按名称查找进程">终止进程树</a>和<a href="/recipes/kill_process_tree.html" title="终止子进程">终止子进程</a>。</p>
+<p>使用 SIGTERM 信号预先检查 PID 是否已被重用终止进程。 在 UNIX 上，这与 <code>os.kill(pid, signal.SIGTERM)</code> 相同。 在 Windows 上，这是 <a href="/psutil_doc/processes/process_class/kill.html" title="杀死进程">kill()</a> 的别名。 另请参阅如何<a href="/psutil_doc/recipes/kill_process_tree.html" title="按名称查找进程">终止进程树</a>和<a href="/psutil_doc/recipes/kill_process_tree.html" title="终止子进程">终止子进程</a>。</p>
 
                     </main>
 
@@ -176,20 +176,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

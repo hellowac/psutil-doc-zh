@@ -148,8 +148,8 @@
 <p>等待进程 PID 终止。 有关返回值的详细信息在 UNIX 和 Windows 上有所不同。</p>
 <p>在 UNIX: 如果进程正常终止，则返回值是一个正整数 <code>&gt;= 0</code> 表示退出代码。 如果进程被信号终止，则返回导致终止的信号的否定值（例如 <code>-SIGTERM</code>）。如果 PID 不是 <a href="https://docs.python.org/3/library/os.html#os.getpid" title="os.getpid">os.getpid</a>（当前进程）的子进程，请等待进程消失并返回 <code>None</code> 。 如果 PID 不存在，则立即返回 <code>None</code> 。</p>
 <p>在 Windows: 始终返回退出代码，它是由 <a href="https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess" title="getExitCodeProcess">GetExitCodeProcess</a> 返回的正整数。</p>
-<p><em><strong>timeout</strong></em> 参数以秒表示。 如果指定并且进程仍然活着，则引发 <a href="/processes/exceptions/index.html#psutil.TimeoutExpired" title="超时">TimeoutExpired</a> 异常。 <code>timeout=0</code> 可用于非阻塞应用程序：它会立即返回或引发 <a href="/processes/exceptions/index.html#psutil.TimeoutExpired" title="超时">TimeoutExpired</a> 异常。</p>
-<p>返回值被缓存。 要等待多个进程，请使用 <a href="/processes/functions/wait_procs.html" title="等待进程终止">psutil.wait_procs()</a>。</p>
+<p><em><strong>timeout</strong></em> 参数以秒表示。 如果指定并且进程仍然活着，则引发 <a href="/psutil_doc/processes/exceptions/index.html#psutil.TimeoutExpired" title="超时">TimeoutExpired</a> 异常。 <code>timeout=0</code> 可用于非阻塞应用程序：它会立即返回或引发 <a href="/psutil_doc/processes/exceptions/index.html#psutil.TimeoutExpired" title="超时">TimeoutExpired</a> 异常。</p>
+<p>返回值被缓存。 要等待多个进程，请使用 <a href="/psutil_doc/processes/functions/wait_procs.html" title="等待进程终止">psutil.wait_procs()</a>。</p>
 <pre><code class="language-python">&gt;&gt;&gt; import psutil
 &gt;&gt;&gt; p = psutil.Process(9891)
 &gt;&gt;&gt; p.terminate()
@@ -188,20 +188,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

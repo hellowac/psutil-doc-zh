@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="进程管道"><a class="header" href="#进程管道">进程管道</a></h1>
 <p><strong><code>class</code> psutil.Popen(*args, **kwargs)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Popen">原文</a> <a name="Popen" ></a></p>
-<p>与 <a href="https://docs.python.org/zh-cn/3/library/subprocess.html#subprocess.Popen" title="subprocess.Popen">subprocess.Popen</a> 相同，但此外它还在单个类中提供所有 <a href="/processes/process_class/index.html" title="进程类">psutil.Process</a> 的方法。 对于以下两个类共有的方法，psutil 的实现更优先：<a href="/processes/process_class/send_signal.html" title="发送信号">send_signal()</a>、<a href="/processes/process_class/terminate.html" title="终止进程">terminate()</a>、<a href="/processes/process_class/kill.html" title="杀死进程">kill()</a>。 这样做是为了避免在其 <code>PID</code> 被重用的情况下杀死另一个进程，修复了 <a href="https://bugs.python.org/issue6973" title="BPO-6973">BPO-6973</a>。</p>
+<p>与 <a href="https://docs.python.org/zh-cn/3/library/subprocess.html#subprocess.Popen" title="subprocess.Popen">subprocess.Popen</a> 相同，但此外它还在单个类中提供所有 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">psutil.Process</a> 的方法。 对于以下两个类共有的方法，psutil 的实现更优先：<a href="/psutil_doc/processes/process_class/send_signal.html" title="发送信号">send_signal()</a>、<a href="/psutil_doc/processes/process_class/terminate.html" title="终止进程">terminate()</a>、<a href="/psutil_doc/processes/process_class/kill.html" title="杀死进程">kill()</a>。 这样做是为了避免在其 <code>PID</code> 被重用的情况下杀死另一个进程，修复了 <a href="https://bugs.python.org/issue6973" title="BPO-6973">BPO-6973</a>。</p>
 <pre><code class="language-python">&gt;&gt;&gt; import psutil
 &gt;&gt;&gt; from subprocess import PIPE
 &gt;&gt;&gt;
@@ -191,20 +191,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="等待进程终止"><a class="header" href="#等待进程终止">等待进程终止</a></h1>
 <p><strong>psutil.wait_procs(procs, timeout=None, callback=None)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.wait_procs">原文</a><a name="psutil.wait_proces"></a></p>
-<p>等待 <a href="/processes/process_class/index.html" title="进程类">Process</a> 实例列表终止的快捷函数。 返回一个 <code>(gone, alive)</code> 元组，指示哪些进程已经消失，哪些仍然活着。消失的进程实例将有一个新的 <em><strong>returncode</strong></em> 属性，表示 <a href="/processes/process_class/wait.html" title="等待">Process.wait()</a> 返回的进程退出状态。<em><strong>callback</strong></em> 参数是一个函数，当正在等待的进程之一终止并且 <a href="/processes/process_class/index.html" title="进程类">Process</a> 实例作为回调参数传递时会被调用（该实例还将具有 <em><strong>returncode</strong></em> 属性集合）。一旦所有进程终止或超时（单位:秒）发生，此函数将返回。 与 <a href="/processes/process_class/wait.html" title="等待">Process.wait()</a> 不同，如果发生超时，它不会引发 <a href="/processes/exceptions/index.html#psutil.TimeoutExpired" title="超时">TimeoutExpired</a>。 一个典型的用例可能是：</p>
+<p>等待 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 实例列表终止的快捷函数。 返回一个 <code>(gone, alive)</code> 元组，指示哪些进程已经消失，哪些仍然活着。消失的进程实例将有一个新的 <em><strong>returncode</strong></em> 属性，表示 <a href="/psutil_doc/processes/process_class/wait.html" title="等待">Process.wait()</a> 返回的进程退出状态。<em><strong>callback</strong></em> 参数是一个函数，当正在等待的进程之一终止并且 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 实例作为回调参数传递时会被调用（该实例还将具有 <em><strong>returncode</strong></em> 属性集合）。一旦所有进程终止或超时（单位:秒）发生，此函数将返回。 与 <a href="/psutil_doc/processes/process_class/wait.html" title="等待">Process.wait()</a> 不同，如果发生超时，它不会引发 <a href="/psutil_doc/processes/exceptions/index.html#psutil.TimeoutExpired" title="超时">TimeoutExpired</a>。 一个典型的用例可能是：</p>
 <ul>
 <li>将 <em><strong>SIGTERM</strong></em> 信号发送到进程列表</li>
 <li>给他们一些时间来终止</li>
@@ -195,20 +195,6 @@ for p in alive:
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

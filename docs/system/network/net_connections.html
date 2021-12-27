@@ -152,7 +152,7 @@
 <li><code>type</code>: 地址类型，<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.SOCK_STREAM" title="SOCK_STREAM">SOCK_STREAM</a>、<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.SOCK_DGRAM" title="SOCK_DGRAM">SOCK_DGRAM</a> 或 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.SOCK_SEQPACKET" title="SOCK_SEQPACKET">SOCK_SEQPACKET</a>。</li>
 <li><code>laddr</code>: 在 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_UNIX" title="AF_UNIX">AF_UNIX</a> 套接字的情况下，本地地址作为<code>(ip, port)</code>命名元组或路径(<code>path</code>)。 对于 UNIX 套接字，请参阅下面的注释。</li>
 <li><code>raddr</code>: 在 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_UNIX" title="AF_UNIX">AF_UNIX</a> 套接字的情况下，远程地址作为<code>(ip, port)</code>命名元组或绝对路径(<code>path</code>)。当远程端点未连接时，您将获得一个空元组 (AF_INET*) 或 <code>&quot;&quot;</code> (AF_UNIX)。 对于 UNIX 套接字，请参阅下面的注释。</li>
-<li><code>status</code>: 表示 TCP 连接的状态。 返回值是 <a href="/constants/connections.html#" title="psutil.CONN_* 常量">psutil.CONN_*</a> 常量之一（字符串）。 对于 UDP 和 UNIX 套接字，这始终是 <code>psutil.CONN_NONE</code>。</li>
+<li><code>status</code>: 表示 TCP 连接的状态。 返回值是 <a href="/psutil_doc/constants/connections.html#" title="psutil.CONN_* 常量">psutil.CONN_*</a> 常量之一（字符串）。 对于 UDP 和 UNIX 套接字，这始终是 <code>psutil.CONN_NONE</code>。</li>
 <li><code>pid</code>: 如果可检索打开套接字的进程的PID，否则为<code>None</code>。 在某些平台（例如 Linux）上，此字段的可用性根据进程权限（需要 root）而变化。</li>
 </ul>
 <!-- [socket.fromfd]: https://docs.python.org/3/library/socket.html#socket.fromfd "socket.fromfd"
@@ -177,7 +177,7 @@
 <tr><td>&quot;unix&quot;</td><td>UNIX 套接字（UDP 和 TCP 协议）</td></tr>
 <tr><td>&quot;all&quot;</td><td>所有可能的族和协议的总和</td></tr>
 </tbody></table>
-<p>在 macOS 和 AIX 上，此功能需要 root 权限。 要获得每个进程的连接，请使用 <a href="/processes/process_class/connections.html" title="网络连接">Process.connections()</a>。 另请参阅 <a href="https://github.com/giampaolo/psutil/blob/master/scripts/netstat.py" title="netstat.py">netstat.py</a> 示例脚本。 例子：</p>
+<p>在 macOS 和 AIX 上，此功能需要 root 权限。 要获得每个进程的连接，请使用 <a href="/psutil_doc/processes/process_class/connections.html" title="网络连接">Process.connections()</a>。 另请参阅 <a href="https://github.com/giampaolo/psutil/blob/master/scripts/netstat.py" title="netstat.py">netstat.py</a> 示例脚本。 例子：</p>
 <pre><code class="language-python">&gt;&gt;&gt; import psutil
 &gt;&gt;&gt; psutil.net_connections()
 [pconn(fd=115, family=&lt;AddressFamily.AF_INET: 2&gt;, type=&lt;SocketType.SOCK_STREAM: 1&gt;, laddr=addr(ip='10.0.0.1', port=48776), raddr=addr(ip='93.186.135.91', port=80), status='ESTABLISHED', pid=1254),
@@ -186,7 +186,7 @@
  pconn(fd=-1, family=&lt;AddressFamily.AF_INET: 2&gt;, type=&lt;SocketType.SOCK_STREAM: 1&gt;, laddr=addr(ip='10.0.0.1', port=51314), raddr=addr(ip='72.14.234.83', port=443), status='SYN_SENT', pid=None)
  ...]
 </code></pre>
-<p><strong>注释</strong>: (macOS 和 AIX) 除非以 root 用户身份运行，否则 <a href="/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">psutil.AccessDenied</a> 异常总是会抛出。 这是操作系统的限制，<code>lsof</code> 也是如此。</p>
+<p><strong>注释</strong>: (macOS 和 AIX) 除非以 root 用户身份运行，否则 <a href="/psutil_doc/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">psutil.AccessDenied</a> 异常总是会抛出。 这是操作系统的限制，<code>lsof</code> 也是如此。</p>
 <p><strong>注释</strong>: (Solaris) 不支持 UNIX 套接字。</p>
 <p><strong>注释</strong>: (Linux, FreeBSD) UNIX 套接字的“raddr”字段始终设置为<code>“”</code>。 这是操作系统的限制。</p>
 <p><strong>注释</strong>: (OpenBSD) UNIX 套接字的“laddr”和“raddr”字段始终设置为<code>“”</code>。 这是操作系统的限制。</p>
@@ -223,20 +223,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

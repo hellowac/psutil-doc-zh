@@ -162,7 +162,7 @@
 <li>psutil.<strong>CONN_IDLE</strong>(<em>Solaris</em>)</li>
 <li>psutil.<strong>CONN_BOUND</strong>(<em>Solaris</em>)</li>
 </ul>
-<p>一组表示 TCP 连接状态的字符串。 由 <a href="/processes/process_class/connections.html" title="网络连接">psutil.Process.connections()</a> 和 <a href="/processes/network/net_connetions.html" title="网络连接">psutil.net_connections()</a>（status 字段）返回。</p>
+<p>一组表示 TCP 连接状态的字符串。 由 <a href="/psutil_doc/processes/process_class/connections.html" title="网络连接">psutil.Process.connections()</a> 和 <a href="/psutil_doc/processes/network/net_connetions.html" title="网络连接">psutil.net_connections()</a>（status 字段）返回。</p>
 
                     </main>
 
@@ -193,20 +193,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

@@ -145,14 +145,14 @@
                     <main>
                         <h1 id="网络连接"><a class="header" href="#网络连接">网络连接</a></h1>
 <p><strong>Process.connections(kind=&quot;inet&quot;)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.connections">原文</a> <a name="Process.connections" ></a></p>
-<p>将进程打开的socket连接作为命名元组列表返回。要获得系统范围的连接，请使用 <a href="/processes/network/net_connetions.html" title="网络连接">psutil.net_connections()</a>。 每个命名元组提供 6 个属性：</p>
+<p>将进程打开的socket连接作为命名元组列表返回。要获得系统范围的连接，请使用 <a href="/psutil_doc/processes/network/net_connetions.html" title="网络连接">psutil.net_connections()</a>。 每个命名元组提供 6 个属性：</p>
 <ul>
 <li><code>fd</code>: 套接字文件描述符。 这可以传递给 <a href="https://docs.python.org/3/library/socket.html#socket.fromfd" title="socket.fromfd">socket.fromfd</a> 以获得可用的套接字对象。在 Windows、FreeBSD 和 SunOS 上，它始终设置为 -1。</li>
 <li><code>family</code>: 地址族，<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_INET" title="AF_INET">AF_INET</a>、<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_INET6" title="AF_INET6">AF_INET6</a> 或 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_UNIX" title="AF_UNIX">AF_UNIX</a> 。</li>
 <li><code>type</code>: 地址类型，<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.SOCK_STREAM" title="SOCK_STREAM">SOCK_STREAM</a> 、<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.SOCK_DGRAM" title="SOCK_DGRAM">SOCK_DGRAM</a> 或 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.SOCK_SEQPACKET" title="SOCK_SEQPACKET">SOCK_SEQPACKET</a> 。</li>
 <li><code>laddr</code>: 在 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_UNIX" title="AF_UNIX">AF_UNIX</a> 套接字的情况下，本地地址作为 <code>(ip, port)</code> 命名元组或路径。 对于 UNIX 套接字，请参阅下面的注释。</li>
 <li><code>raddr</code>: 在 UNIX 套接字的情况下，远程地址作为<code>(ip, port)</code> 命名元组或绝对路径。 当远程端点未连接时，您将获得一个空元组 (<strong>AF_INET*</strong>) 或 <code>&quot;&quot;</code> (<strong>AF_UNIX</strong>)。 对于 UNIX 套接字，请参阅下面的注释。</li>
-<li><code>status</code>: 表示 TCP 连接的状态。 返回值是 <a href="/constants/connections.html#" title="psutil.CONN_* 常量">psutil.CONN_*</a> 常量之一。 对于 UDP 和 UNIX 套接字，这始终是 <a href="/constants/connetctions.html#CONN_NONE" title="网络连接常量NONE">psutil.CONN_NONE</a>。</li>
+<li><code>status</code>: 表示 TCP 连接的状态。 返回值是 <a href="/psutil_doc/constants/connections.html#" title="psutil.CONN_* 常量">psutil.CONN_*</a> 常量之一。 对于 UDP 和 UNIX 套接字，这始终是 <a href="/psutil_doc/constants/connetctions.html#CONN_NONE" title="网络连接常量NONE">psutil.CONN_NONE</a>。</li>
 </ul>
 <p><em><strong>kind</strong></em> 参数是一个字符串，用于过滤符合以下条件的连接：</p>
 <table><thead><tr><th>Kind 值</th><th>网络连接使用</th></tr></thead><tbody>
@@ -182,7 +182,7 @@ pconn(fd=123, family=&lt;AddressFamily.AF_INET: 2&gt;, type=&lt;SocketType.SOCK_
 <p><strong>注释</strong>: <em>(Solaris) 不支持 UNIX 套接字。</em></p>
 <p><strong>注释</strong>: <em>(Linux, FreeBSD) UNIX 套接字的“<strong>raddr</strong>”字段始终设置为<code>“”</code>。 这是操作系统的限制。</em></p>
 <p><strong>注释</strong>: (OpenBSD) <em>UNIX 套接字的“<strong>laddr</strong>”和“<strong>raddr</strong>”字段始终设置为<code>“”</code>。 这是操作系统的限制。</em></p>
-<p><strong>注释</strong>: (AIX) <a href="/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">psutil.AccessDenied</a> 异常总是抛出，除非以 <code>root</code> 身份运行（<code>lsof</code> 也是如此）。</p>
+<p><strong>注释</strong>: (AIX) <a href="/psutil_doc/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">psutil.AccessDenied</a> 异常总是抛出，除非以 <code>root</code> 身份运行（<code>lsof</code> 也是如此）。</p>
 <p><em>5.3.0 版本中修改: : “<strong>laddr</strong>”和“<strong>raddr</strong>”被命名为元组。</em></p>
 
                     </main>
@@ -214,20 +214,6 @@ pconn(fd=123, family=&lt;AddressFamily.AF_INET: 2&gt;, type=&lt;SocketType.SOCK_
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="内存利用率"><a class="header" href="#内存利用率">内存利用率</a></h1>
 <p><strong>Process.memory_percent(memtype=&quot;rss&quot;)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.memory_percent">原文</a> <a name="Process.memory_percent" ></a></p>
-<p>将进程内存与总物理系统内存进行比较，并以百分比形式计算进程内存利用率。 <em><strong>memtype</strong></em> 参数是一个字符串，它指示您要比较的进程内存类型。您可以在 <a href="/processes/process_class/memory_info.html" title="内存信息">memory_info()</a> 和 <a href="/processes/process_class/memory_full_info.html" title="内存完全信息">memory_full_info()</a> 返回的命名元组字段名称之间进行选择（默认为“<em><strong>rss</strong></em>”）。</p>
+<p>将进程内存与总物理系统内存进行比较，并以百分比形式计算进程内存利用率。 <em><strong>memtype</strong></em> 参数是一个字符串，它指示您要比较的进程内存类型。您可以在 <a href="/psutil_doc/processes/process_class/memory_info.html" title="内存信息">memory_info()</a> 和 <a href="/psutil_doc/processes/process_class/memory_full_info.html" title="内存完全信息">memory_full_info()</a> 返回的命名元组字段名称之间进行选择（默认为“<em><strong>rss</strong></em>”）。</p>
 <p><em>4.0.0 版本中修改: 新增 <strong>memtype</strong> 参数.</em></p>
 
                     </main>
@@ -177,20 +177,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

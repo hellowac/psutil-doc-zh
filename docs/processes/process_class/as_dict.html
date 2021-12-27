@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="字典信息"><a class="header" href="#字典信息">字典信息</a></h1>
 <p><strong>Process.as_dict(attrs=None, ad_value=None)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.as_dict">原文</a> <a name="Process.as_dict" ></a></p>
-<p>以字典形式检索进程的多个信息的实例方法。如果指定了 <em><strong>attrs</strong></em> ，则它必须是反映 <a href="/processes/process_class/index.html" title="进程类">Process</a> 类可用的属性名称的字符串列表。以下是可能的字符串值列表：<code>'cmdline'</code>, <code>'connections'</code>, <code>'cpu_affinity'</code>, <code>'cpu_num'</code>, <code>'cpu_percent'</code>, <code>'cpu_times'</code>, <code>'create_time'</code>, <code>'cwd'</code>, <code>'environ'</code>, <code>'exe'</code>, <code>'gids'</code>, <code>'io_counters'</code>, <code>'ionice'</code>, <code>'memory_full_info'</code>, <code>'memory_info'</code>, <code>'memory_maps'</code>, <code>'memory_percent'</code>, <code>'name'</code>, <code>'nice'</code>, <code>'num_ctx_switches'</code>, <code>'num_fds'</code>, <code>'num_handles'</code>, <code>'num_threads'</code>, <code>'open_files'</code>, <code>'pid'</code>, <code>'ppid'</code>, <code>'status'</code>, <code>'terminal'</code>, <code>'threads'</code>, <code>'uids'</code>, <code>'username'</code>. 如果没有传递 <em><strong>attrs</strong></em> 参数，则假定为所有公共的只读属性。<em><strong>ad_value</strong></em> 是分配给字典键的值，以防在检索该特定进程信息时引发 <a href="/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">AccessDenied</a> 或 <a href="/processes/exceptions/index.html#psutil.ZombieProcess" title="僵尸进程">ZombieProcess</a> 异常。 在内部， <a href="/processes/process_class/as_dict.html" title="字典信息">as_dict()</a> 使用 <a href="/processes/process_class/oneshot.html" title="快照">oneshot()</a> 上下文管理器，因此也无需使用它。</p>
+<p>以字典形式检索进程的多个信息的实例方法。如果指定了 <em><strong>attrs</strong></em> ，则它必须是反映 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 类可用的属性名称的字符串列表。以下是可能的字符串值列表：<code>'cmdline'</code>, <code>'connections'</code>, <code>'cpu_affinity'</code>, <code>'cpu_num'</code>, <code>'cpu_percent'</code>, <code>'cpu_times'</code>, <code>'create_time'</code>, <code>'cwd'</code>, <code>'environ'</code>, <code>'exe'</code>, <code>'gids'</code>, <code>'io_counters'</code>, <code>'ionice'</code>, <code>'memory_full_info'</code>, <code>'memory_info'</code>, <code>'memory_maps'</code>, <code>'memory_percent'</code>, <code>'name'</code>, <code>'nice'</code>, <code>'num_ctx_switches'</code>, <code>'num_fds'</code>, <code>'num_handles'</code>, <code>'num_threads'</code>, <code>'open_files'</code>, <code>'pid'</code>, <code>'ppid'</code>, <code>'status'</code>, <code>'terminal'</code>, <code>'threads'</code>, <code>'uids'</code>, <code>'username'</code>. 如果没有传递 <em><strong>attrs</strong></em> 参数，则假定为所有公共的只读属性。<em><strong>ad_value</strong></em> 是分配给字典键的值，以防在检索该特定进程信息时引发 <a href="/psutil_doc/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">AccessDenied</a> 或 <a href="/psutil_doc/processes/exceptions/index.html#psutil.ZombieProcess" title="僵尸进程">ZombieProcess</a> 异常。 在内部， <a href="/psutil_doc/processes/process_class/as_dict.html" title="字典信息">as_dict()</a> 使用 <a href="/psutil_doc/processes/process_class/oneshot.html" title="快照">oneshot()</a> 上下文管理器，因此也无需使用它。</p>
 <pre><code class="language-python">&gt;&gt;&gt; import psutil
 &gt;&gt;&gt; p = psutil.Process()
 &gt;&gt;&gt; p.as_dict(attrs=['pid', 'name', 'username'])
@@ -160,8 +160,8 @@
  'open_files', 'name', 'num_threads', 'exe', 'uids', 'gids', 
  'cpu_affinity', 'memory_percent', 'environ']
 </code></pre>
-<p><em>3.0.0 版本中修改: <strong>ad_value</strong> 在引发 <a href="/processes/exceptions/index.html#psutil.ZombieProcess" title="僵尸进程">ZombieProcess</a> 异常时也使用，不仅是 <a href="/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">AccessDenied</a>。</em></p>
-<p><em>4.5.0 版本中修改: 由于 <a href="/processes/process_class/oneshot.html" title="快照">oneshot()</a> 上下文管理器，<a href="/processes/process_class/as_dict.html" title="字典信息">as_dict()</a> 的速度要快得多。</em></p>
+<p><em>3.0.0 版本中修改: <strong>ad_value</strong> 在引发 <a href="/psutil_doc/processes/exceptions/index.html#psutil.ZombieProcess" title="僵尸进程">ZombieProcess</a> 异常时也使用，不仅是 <a href="/psutil_doc/processes/exceptions/index.html#psutil.AccessDenied" title="没有权限">AccessDenied</a>。</em></p>
+<p><em>4.5.0 版本中修改: 由于 <a href="/psutil_doc/processes/process_class/oneshot.html" title="快照">oneshot()</a> 上下文管理器，<a href="/psutil_doc/processes/process_class/as_dict.html" title="字典信息">as_dict()</a> 的速度要快得多。</em></p>
 
                     </main>
 
@@ -192,20 +192,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

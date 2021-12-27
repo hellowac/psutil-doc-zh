@@ -148,7 +148,7 @@
 <p>将电池状态信息作为包含以下值的命名元组返回。 如果未安装电池或无法确定指标，则返回 <code>None</code> 。</p>
 <ul>
 <li><code>percent</code>: 电池电量剩余百分比。</li>
-<li><code>secsleft</code>: 电池电量耗尽前还剩多少秒的粗略近似值。 如果连接了交流电源线，则此项设置为 <a href="/constants/hardware.html#psutil.POWER_TIME_UNLIMITED">psutil.POWER_TIME_UNLIMITED</a>。 如果无法确定，则将其设置为 <a href="/constants/hardware.html#psutil.POWER_TIME_UNKNOWN">psutil.POWER_TIME_UNKNOWN</a>。</li>
+<li><code>secsleft</code>: 电池电量耗尽前还剩多少秒的粗略近似值。 如果连接了交流电源线，则此项设置为 <a href="/psutil_doc/constants/hardware.html#psutil.POWER_TIME_UNLIMITED">psutil.POWER_TIME_UNLIMITED</a>。 如果无法确定，则将其设置为 <a href="/psutil_doc/constants/hardware.html#psutil.POWER_TIME_UNKNOWN">psutil.POWER_TIME_UNKNOWN</a>。</li>
 <li><code>power_plugged</code>: 如果 AC 电源线已连接，则为 <code>True</code> ，否则为 <code>False</code> ，如果无法确定则为 <code>None</code> 。</li>
 </ul>
 <p>例子:</p>
@@ -199,20 +199,6 @@ charge = 93%, time left = 4:37:08
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

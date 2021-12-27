@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="进程名称"><a class="header" href="#进程名称">进程名称</a></h1>
 <p><strong>Process.name()</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.name">原文</a> <a name="Process.name" ></a></p>
-<p>返回进程名称. 在 Windows 上，第一次调用后会缓存返回值。在 POSIX 类型机器上时则不会缓存， 因为进程名称可能会改变。 另请参阅如何<a href="/recipes/find_process_by_name.html" title="按名称查找进程">按名称查找进程</a>。</p>
+<p>返回进程名称. 在 Windows 上，第一次调用后会缓存返回值。在 POSIX 类型机器上时则不会缓存， 因为进程名称可能会改变。 另请参阅如何<a href="/psutil_doc/recipes/find_process_by_name.html" title="按名称查找进程">按名称查找进程</a>。</p>
 
                     </main>
 
@@ -176,20 +176,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

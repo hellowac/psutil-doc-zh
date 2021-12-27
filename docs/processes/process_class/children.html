@@ -159,7 +159,7 @@ B, C, D
 &gt;&gt;&gt; p.children(recursive=True)
 B, X, Y, C, D
 </code></pre>
-<p><strong>注释</strong>: 在上面的例子中，如果进程 X 消失，进程 Y 也不会被返回，因为对进程 A 的引用丢失了。 这个<a href="https://github.com/giampaolo/psutil/blob/65a52341b55faaab41f68ebc4ed31f18f0929754/psutil/tests/test_process.py#L1064-L1075" title="父子进程单元测试">单元测试</a>很好地总结了这个概念。 另请参阅如何<a href="/recipes/kill_process_tree.html" title="按名称查找进程">终止进程树</a>和<a href="/recipes/kill_process_tree.html" title="终止子进程">终止子进程</a>。</p>
+<p><strong>注释</strong>: 在上面的例子中，如果进程 X 消失，进程 Y 也不会被返回，因为对进程 A 的引用丢失了。 这个<a href="https://github.com/giampaolo/psutil/blob/65a52341b55faaab41f68ebc4ed31f18f0929754/psutil/tests/test_process.py#L1064-L1075" title="父子进程单元测试">单元测试</a>很好地总结了这个概念。 另请参阅如何<a href="/psutil_doc/recipes/kill_process_tree.html" title="按名称查找进程">终止进程树</a>和<a href="/psutil_doc/recipes/kill_process_tree.html" title="终止子进程">终止子进程</a>。</p>
 
                     </main>
 
@@ -190,20 +190,6 @@ B, X, Y, C, D
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

@@ -186,7 +186,7 @@
 </li>
 <li>
 <p>psutil.<strong>PROCFS_PATH</strong>
-Linux、Solaris 和 AIX 上 /proc 文件系统的路径（默认为<code>“/proc”</code>）。您可能希望在导入 psutil 后立即重新设置此常量，以防您的 /proc 文件系统安装在其他地方，或者您想检索有关 Linux 容器（如 Docker、Heroku 或 LXC）的信息（请参阅<a href="https://fabiokung.com/2014/03/13/memory-inside-linux-containers/">此处</a>了解更多信息）。必须注意的是，此技巧仅适用于依赖 /proc 文件系统的 API（例如<a href="/system/memory/index.html" title="内存API">内存 API</a>和大多数 <a href="/processes/process_class/index.html" title="进程类">Process</a> 类方法）。
+Linux、Solaris 和 AIX 上 /proc 文件系统的路径（默认为<code>“/proc”</code>）。您可能希望在导入 psutil 后立即重新设置此常量，以防您的 /proc 文件系统安装在其他地方，或者您想检索有关 Linux 容器（如 Docker、Heroku 或 LXC）的信息（请参阅<a href="https://fabiokung.com/2014/03/13/memory-inside-linux-containers/">此处</a>了解更多信息）。必须注意的是，此技巧仅适用于依赖 /proc 文件系统的 API（例如<a href="/psutil_doc/system/memory/index.html" title="内存API">内存 API</a>和大多数 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 类方法）。
 可用平台: Linux, Solaris, AIX
 <em>3.2.3 版本中新增.</em>
 <em>3.4.2 版本中修改: 也可在 Solaris 上使用。</em>
@@ -223,20 +223,6 @@ Linux、Solaris 和 AIX 上 /proc 文件系统的路径（默认为<code>“/pro
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="父进程列表"><a class="header" href="#父进程列表">父进程列表</a></h1>
 <p><strong>Process.parents()</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.parents">原文</a> <a name="Process.parents" ></a></p>
-<p>以列表形式返回当前进程的所有父进程的实例方法, 如果没有父进程，返回空列表。同样参考 <a href="/processes/process_class/ppid.html" title="父进程ID">ppid()</a> 和 <a href="/processes/process_class/parent.html" title="父进程">parent()</a> 方法.</p>
+<p>以列表形式返回当前进程的所有父进程的实例方法, 如果没有父进程，返回空列表。同样参考 <a href="/psutil_doc/processes/process_class/ppid.html" title="父进程ID">ppid()</a> 和 <a href="/psutil_doc/processes/process_class/parent.html" title="父进程">parent()</a> 方法.</p>
 <p>译注例子:</p>
 <pre><code class="language-python">&gt;&gt;&gt; psutil.Process().parents()
 [psutil.Process(pid=79791, name='zsh', status='running', started='2021-12-09 17:23:11'), psutil.Process(pid=3483, name='Code Helper (Renderer)', status='running', started='2021-12-02 16:07:48'), psutil.Process(pid=3479, name='Code Helper (Renderer)', status='running', started='2021-12-02 16:07:48'), psutil.Process(pid=471, name='Electron', status='running', started='2021-12-02 16:07:35'), psutil.Process(pid=1, name='launchd', status='running', started='2021-12-02 16:07:20'), psutil.Process(pid=0, name='kernel_task', status='running', started='2021-12-02 16:07:20')]
@@ -181,20 +181,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

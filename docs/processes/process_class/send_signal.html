@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="发送信号"><a class="header" href="#发送信号">发送信号</a></h1>
 <p><strong>Process.send_signal(signal)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.send_signal">原文</a> <a name="Process.send_signal" ></a></p>
-<p>发送信号(参阅 <a href="https://docs.python.org//library/signal.html" title="signal module">信号模块手册</a>)以抢先检查 PID 是否已被重用。在 UNIX 上，这与 <code>os.kill(pid, sig)</code> 相同。在 Windows 上仅支持 <code>SIGTERM</code> <code>、CTRL_C_EVENT</code> 和 <code>CTRL_BREAK_EVENT</code> 信号，并且 <code>SIGTERM</code> 被视为 <a href="/processes/process_class/kill.html" title="杀死进程">kill()</a> 的别名。另请参阅如何<a href="/recipes/kill_process_tree.html" title="按名称查找进程">终止进程树</a>和<a href="/recipes/kill_process_tree.html" title="终止子进程">终止子进程</a>。</p>
+<p>发送信号(参阅 <a href="/psutil_dochttps://docs.python.org//library/signal.html" title="signal module">信号模块手册</a>)以抢先检查 PID 是否已被重用。在 UNIX 上，这与 <code>os.kill(pid, sig)</code> 相同。在 Windows 上仅支持 <code>SIGTERM</code> <code>、CTRL_C_EVENT</code> 和 <code>CTRL_BREAK_EVENT</code> 信号，并且 <code>SIGTERM</code> 被视为 <a href="/psutil_doc/processes/process_class/kill.html" title="杀死进程">kill()</a> 的别名。另请参阅如何<a href="/psutil_doc/recipes/kill_process_tree.html" title="按名称查找进程">终止进程树</a>和<a href="/psutil_doc/recipes/kill_process_tree.html" title="终止子进程">终止子进程</a>。</p>
 <p><em>3.2.0 版本中修改: 添加了对 Windows 上的 <code>CTRL_C_EVENT</code> 和 <code>CTRL_BREAK_EVENT</code> 信号的支持。</em></p>
 
                     </main>
@@ -177,20 +177,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

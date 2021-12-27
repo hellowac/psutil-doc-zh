@@ -147,7 +147,7 @@
 <p><strong>psutil.net_if_addrs()</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.net_if_addrs">原文</a> <a name="psutil.net_if_addrs"></a></p>
 <p>返回与系统上安装的每个 NIC（网络接口卡）关联的地址作为字典，其键是 NIC 名称，值是分配给 NIC 的每个地址的命名元组列表。 每个命名元组包括 5 个字段：</p>
 <ul>
-<li><code>family</code>: 地址族，<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_INET" title="AF_INET">AF_INET</a> 或 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_INET6" title="AF_INET6">AF_INET6</a> 或 <a href="/constants/hardware.html#psutil.AF_LINK" title="标识与网络接口关联的 MAC 地址的常量">psutil.AF_LINK</a>，指的是 MAC 地址。</li>
+<li><code>family</code>: 地址族，<a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_INET" title="AF_INET">AF_INET</a> 或 <a href="https://docs.python.org/zh-cn/3/library/socket.html#socket.AF_INET6" title="AF_INET6">AF_INET6</a> 或 <a href="/psutil_doc/constants/hardware.html#psutil.AF_LINK" title="标识与网络接口关联的 MAC 地址的常量">psutil.AF_LINK</a>，指的是 MAC 地址。</li>
 <li><code>address</code>: 主 NIC 地址（始终设置）。</li>
 <li><code>netmask</code>: 网络掩码地址（可能是 <code>None</code> ）。</li>
 <li><code>broadcast</code>: 广播地址（可能是 <code>None</code> ）。</li>
@@ -201,20 +201,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

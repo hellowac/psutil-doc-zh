@@ -149,18 +149,18 @@
 <p>基本异常类。 所有其他异常都继承自这个异常。</p>
 <h2 id="进程不存在"><a class="header" href="#进程不存在"><strong>进程不存在</strong></a></h2>
 <p><code>class</code> <strong>psutil.NoSuchProcess(pid, name=None, msg=None)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.NoSuchProcess">原文</a> <a name="psutil.NoSuchProcess"></a></p>
-<p>当在当前进程列表中找不到具有给定 pid 的进程或进程不再存在时，由 <a href="/processes/process_class/index.html" title="进程类">Process</a> 类的方法抛出。 <em><strong>name</strong></em> 是进程消失之前的名称，只有在之前调用 <a href="/processes/process_class/name.html" title="进程名称">Process.name()</a> 时才会设置。</p>
+<p>当在当前进程列表中找不到具有给定 pid 的进程或进程不再存在时，由 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 类的方法抛出。 <em><strong>name</strong></em> 是进程消失之前的名称，只有在之前调用 <a href="/psutil_doc/processes/process_class/name.html" title="进程名称">Process.name()</a> 时才会设置。</p>
 <h2 id="僵尸进程"><a class="header" href="#僵尸进程"><strong>僵尸进程</strong></a></h2>
 <p><code>class</code> <strong>psutil.ZombieProcess(pid, name=None, ppid=None, msg=None)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.ZombieProcess">原文</a> <a name="psutil.ZombieProcess"></a></p>
-<p>在 UNIX 上查询僵尸进程（Windows 没有僵尸进程）时，这可能由 <a href="/processes/process_class/index.html" title="进程类">Process</a> 类的方法抛出。 如果在进程变成僵尸之前调用 <a href="/processes/process_class/name.html" title="进程名称">Process.name()</a> 或 <a href="/processes/process_class/ppid.html" title="父进程ID">Process.ppid()</a> 方法，则 <em><strong>name</strong></em> 和 <em><strong>ppid</strong></em> 属性可用。</p>
-<p><strong>注释</strong>: 这是 <a href="./#%E8%BF%9B%E7%A8%8B%E4%B8%8D%E5%AD%98%E5%9C%A8">NoSuchProcess</a> 的子类，因此如果对检索僵尸进程不感兴趣（例如，在使用 <a href="/processes/functions/process_iter.html" title="迭代进程">process_iter()</a> 时），可以忽略此异常并只捕获 <a href="./#%E8%BF%9B%E7%A8%8B%E4%B8%8D%E5%AD%98%E5%9C%A8">NoSuchProcess</a> 。</p>
+<p>在 UNIX 上查询僵尸进程（Windows 没有僵尸进程）时，这可能由 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 类的方法抛出。 如果在进程变成僵尸之前调用 <a href="/psutil_doc/processes/process_class/name.html" title="进程名称">Process.name()</a> 或 <a href="/psutil_doc/processes/process_class/ppid.html" title="父进程ID">Process.ppid()</a> 方法，则 <em><strong>name</strong></em> 和 <em><strong>ppid</strong></em> 属性可用。</p>
+<p><strong>注释</strong>: 这是 <a href="./#%E8%BF%9B%E7%A8%8B%E4%B8%8D%E5%AD%98%E5%9C%A8">NoSuchProcess</a> 的子类，因此如果对检索僵尸进程不感兴趣（例如，在使用 <a href="/psutil_doc/processes/functions/process_iter.html" title="迭代进程">process_iter()</a> 时），可以忽略此异常并只捕获 <a href="./#%E8%BF%9B%E7%A8%8B%E4%B8%8D%E5%AD%98%E5%9C%A8">NoSuchProcess</a> 。</p>
 <p><em>3.0.0 版本中新增.</em></p>
 <h2 id="无权限"><a class="header" href="#无权限"><strong>无权限</strong></a></h2>
 <p><code>class</code> <strong>psutil.AccessDenied(pid=None, name=None, msg=None)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.AccessDenied">原文</a> <a name="psutil.AccessDenied"></a></p>
-<p>当由于权限不足而拒绝执行操作时，由 <a href="/processes/process_class/index.html" title="进程类">Process</a> 类的方法抛出。 如果之前调用了 <a href="/processes/process_class/name.html" title="进程名称">Process.name()</a>，则 <em><strong>name</strong></em> 属性可用。</p>
+<p>当由于权限不足而拒绝执行操作时，由 <a href="/psutil_doc/processes/process_class/index.html" title="进程类">Process</a> 类的方法抛出。 如果之前调用了 <a href="/psutil_doc/processes/process_class/name.html" title="进程名称">Process.name()</a>，则 <em><strong>name</strong></em> 属性可用。</p>
 <h2 id="超时"><a class="header" href="#超时"><strong>超时</strong></a></h2>
 <p><code>class</code> <strong>psutil.TimeoutExpired(seconds, pid=None, name=None, msg=None)</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.TimeoutExpired">原文</a> <a name="psutil.TimeoutExpired"></a></p>
-<p>如果超时到期并且进程仍然存在，则由 <a href="/processes/process_class/wait.html" title="等待">Process.wait()</a> 方法引发。 如果之前调用了 <a href="/processes/process_class/name.html" title="进程名称">Process.name()</a>，则 <em><strong>name</strong></em> 属性可用。</p>
+<p>如果超时到期并且进程仍然存在，则由 <a href="/psutil_doc/processes/process_class/wait.html" title="等待">Process.wait()</a> 方法引发。 如果之前调用了 <a href="/psutil_doc/processes/process_class/name.html" title="进程名称">Process.name()</a>，则 <em><strong>name</strong></em> 属性可用。</p>
 
                     </main>
 
@@ -191,20 +191,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

@@ -145,7 +145,7 @@
                     <main>
                         <h1 id="父进程id"><a class="header" href="#父进程id">父进程ID</a></h1>
 <p><strong>Process.ppid()</strong> - <a href="https://psutil.readthedocs.io/en/latest/#psutil.Process.ppid">原文</a> <a name="Process.ppid" ></a></p>
-<p>返回父进程PID。 在 Windows 上，第一次调用后会缓存返回值。在 POSIX 类型机器上时则不会缓存，因为如果进程变成僵尸进程， <em><strong>ppid</strong></em> 可能会改变，另见 <a href="/processes/process_class/parent.html" title="父进程">parent()</a> 和 <a href="/processes/process_class/parents.html" title="父进程列表">parents()</a> 方法。</p>
+<p>返回父进程PID。 在 Windows 上，第一次调用后会缓存返回值。在 POSIX 类型机器上时则不会缓存，因为如果进程变成僵尸进程， <em><strong>ppid</strong></em> 可能会改变，另见 <a href="/psutil_doc/processes/process_class/parent.html" title="父进程">parent()</a> 和 <a href="/psutil_doc/processes/process_class/parents.html" title="父进程列表">parents()</a> 方法。</p>
 
                     </main>
 
@@ -176,20 +176,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

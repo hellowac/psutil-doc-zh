@@ -159,7 +159,7 @@
 </li>
 <li>
 <p>NIC_DUPLEX_UNKNOWN <a name="psutil.NIC_DUPLEX_UNKNOWN"></a>
-标识 NIC（网卡）是全速模式还是半速模式的常量。 <em><strong>NIC_DUPLEX_FULL</strong></em> 表示网卡可以同时发送和接收数据（文件），<em><strong>NIC_DUPLEX_FULL</strong></em> 表示网卡可以一次发送或接收数据。 与 <a href="/system/network/net_if_stats.html" title="网卡状态">psutil.net_if_stats()</a> 结合使用。
+标识 NIC（网卡）是全速模式还是半速模式的常量。 <em><strong>NIC_DUPLEX_FULL</strong></em> 表示网卡可以同时发送和接收数据（文件），<em><strong>NIC_DUPLEX_FULL</strong></em> 表示网卡可以一次发送或接收数据。 与 <a href="/psutil_doc/system/network/net_if_stats.html" title="网卡状态">psutil.net_if_stats()</a> 结合使用。
 <em>3.0.0 版本中新增.</em></p>
 </li>
 <li>
@@ -167,7 +167,7 @@
 </li>
 <li>
 <p>POWER_TIME_UNLIMITED <a name="psutil.POWER_TIME_UNLIMITED">
-电池剩余时间是否无法确定或无限。 可以分配给 <a href="/system/Sensors/sensors_battery.html" title="电池">psutil.sensors_battery()</a> 的 <em><strong>secsleft</strong></em> 字段。
+电池剩余时间是否无法确定或无限。 可以分配给 <a href="/psutil_doc/system/Sensors/sensors_battery.html" title="电池">psutil.sensors_battery()</a> 的 <em><strong>secsleft</strong></em> 字段。
 5.1.0 版本中新增.</p>
 </li>
 <li>
@@ -209,20 +209,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

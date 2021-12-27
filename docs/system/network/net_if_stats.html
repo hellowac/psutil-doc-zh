@@ -148,7 +148,7 @@
 <p>以字典形式返回系统上安装的每个 NIC（网络接口卡）的信息，其键是 NIC 名称，值是具有以下字段的命名元组：</p>
 <ul>
 <li><code>isup</code>: 一个布尔值，指示 NIC 是否已启用并正在运行（意味着以太网电缆或 Wi-Fi 已连接）。</li>
-<li><code>duplex</code>: 双工通信类型； 它可以是 <a href="/constants/hardware.html#psutil.NIC_DUPLEX_FULL" title="psutil.NIC_DUPLEX_FULL">NIC_DUPLEX_FULL</a>、<a href="/constants/hardware.html#psutil.NIC_DUPLEX_HALF" title="psutil.NIC_DUPLEX_HALF">NIC_DUPLEX_HALF</a> 或 <a href="/constants/hardware.html#psutil.NIC_DUPLEX_UNKNOWN" title="psutil.NIC_DUPLEX_UNKNOWN">NIC_DUPLEX_UNKNOWN</a>。</li>
+<li><code>duplex</code>: 双工通信类型； 它可以是 <a href="/psutil_doc/constants/hardware.html#psutil.NIC_DUPLEX_FULL" title="psutil.NIC_DUPLEX_FULL">NIC_DUPLEX_FULL</a>、<a href="/psutil_doc/constants/hardware.html#psutil.NIC_DUPLEX_HALF" title="psutil.NIC_DUPLEX_HALF">NIC_DUPLEX_HALF</a> 或 <a href="/psutil_doc/constants/hardware.html#psutil.NIC_DUPLEX_UNKNOWN" title="psutil.NIC_DUPLEX_UNKNOWN">NIC_DUPLEX_UNKNOWN</a>。</li>
 <li><code>speed</code>: 以兆位 (MB) 表示的 NIC 速度，如果无法确定（例如“本地主机”），它将设置为 <code>0</code>。</li>
 <li><code>mtu</code>: NIC 的最大传输单位，以字节为单位。</li>
 </ul>
@@ -191,20 +191,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         

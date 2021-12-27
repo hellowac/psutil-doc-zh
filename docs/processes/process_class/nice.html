@@ -153,7 +153,7 @@
 10
 &gt;&gt;&gt;
 </code></pre>
-<p>从 Python 3.3 开始，此功能类似于 <a href="https://docs.python.org/zh-cn/3/library/os.html#os.getpriority" title="os.getpriority">os.getpriority</a> 和 <a href="https://docs.python.org/zh-cn/3/library/os.html#os.setpriority" title="os.setpriority">os.setpriority</a>（参见 <a href="https://bugs.python.org/issue10784" title="BPO-10784">BPO-10784</a>）。 在 Windows 上，这是通过 Windows API 的 <a href="https://docs.microsoft.com/zh-cn/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getpriorityclass">GetPriorityClass</a> 和 <a href="https://docs.microsoft.com/zh-cn/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setpriorityclass">SetPriorityClass</a> 实现的，<em><strong>value</strong></em> 是 <a href="/constants/process_priority.html" title="进程优先级">psutil.*_PRIORITY_CLASS</a> 常量之一， 对应于MSDN文档。 在 Windows 上增加进程优先级的示例如下：</p>
+<p>从 Python 3.3 开始，此功能类似于 <a href="https://docs.python.org/zh-cn/3/library/os.html#os.getpriority" title="os.getpriority">os.getpriority</a> 和 <a href="https://docs.python.org/zh-cn/3/library/os.html#os.setpriority" title="os.setpriority">os.setpriority</a>（参见 <a href="https://bugs.python.org/issue10784" title="BPO-10784">BPO-10784</a>）。 在 Windows 上，这是通过 Windows API 的 <a href="https://docs.microsoft.com/zh-cn/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getpriorityclass">GetPriorityClass</a> 和 <a href="https://docs.microsoft.com/zh-cn/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setpriorityclass">SetPriorityClass</a> 实现的，<em><strong>value</strong></em> 是 <a href="/psutil_doc/constants/process_priority.html" title="进程优先级">psutil.*_PRIORITY_CLASS</a> 常量之一， 对应于MSDN文档。 在 Windows 上增加进程优先级的示例如下：</p>
 <pre><code class="language-python">&gt;&gt;&gt; p.nice(psutil.HIGH_PRIORITY_CLASS)
 </code></pre>
 
@@ -186,20 +186,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
         
