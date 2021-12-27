@@ -1,5 +1,7 @@
 # 网络连接
 
+{{#include ../links.md}}
+
 参考: [原文](https://psutil.readthedocs.io/en/latest/#connections-constants)
 
 - psutil.**CONN_ESTABLISHED**
@@ -18,4 +20,4 @@
 - psutil.**CONN_IDLE**(_Solaris_)
 - psutil.**CONN_BOUND**(_Solaris_)
 
-一组表示 TCP 连接状态的字符串。 由 [psutil.Process.connections()](#Process.connections) 和 [psutil.net_connections()](#psutil.net_connections)（status 字段）返回。
+一组表示 TCP 连接状态的字符串。 由 [psutil.Process.connections()][Process.connections()] 和 [psutil.net_connections()]（status 字段）返回。

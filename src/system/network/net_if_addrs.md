@@ -1,10 +1,12 @@
 # 网络连接信息
 
+{{#include ../../links.md}}
+
 **psutil.net_if_addrs()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.net_if_addrs) <a name="psutil.net_if_addrs"></a>
 
 返回与系统上安装的每个 NIC（网络接口卡）关联的地址作为字典，其键是 NIC 名称，值是分配给 NIC 的每个地址的命名元组列表。 每个命名元组包括 5 个字段：
 
-- `family`: 地址族，[AF_INET][AF_INET] 或 [AF_INET6][AF_INET6] 或 [psutil.AF_LINK](#psutil.AF_LINK)，指的是 MAC 地址。
+- `family`: 地址族，[AF_INET] 或 [AF_INET6] 或 [psutil.AF_LINK]，指的是 MAC 地址。
 - `address`: 主 NIC 地址（始终设置）。
 - `netmask`: 网络掩码地址（可能是 `None` ）。
 - `broadcast`: 广播地址（可能是 `None` ）。
@@ -24,15 +26,13 @@
 >>>
 ```
 
-另请参阅示例应用程序 [nettop.py][nettop.py] 和 [ifconfig.py][ifconfig.py]。
+另请参阅示例应用程序 [nettop.py] 和 [ifconfig.py]。
 
-**注释**: 如果对其他协议家族（例如 AF_BLUETOOTH）感兴趣，可以使用更强大的 [netifaces][netifaces] 扩展。
+**注释**: 如果对其他协议家族（例如 AF_BLUETOOTH）感兴趣，可以使用更强大的 [netifaces] 扩展。
 
 **Note**: 你可以有多个相同系列的地址与每个接口相关联（这就是为什么 dict 值是列表）。
 
 **Note**: Windows 不支持广播和 ptp，并且始终为 `None` 。
-
-[netifaces]: https://pypi.org/project/netifaces/ "netifaces"
 
 *3.0.0 版本中新增.*
 

@@ -1,5 +1,7 @@
 # 内存信息
 
+{{#include ../../links.md}}
+
 **Process.memory_info()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.memory_info) <a name="Process.memory_info" ></a>
 
 返回具有变量字段的命名元组，具体取决于表示有关进程的内存信息的平台。 所有平台上可用的 ***“portable”*** 字段是 `rss` 和 `vms` 。 所有数字都以字节表示。
@@ -29,9 +31,7 @@
 - `pfaults` (macOS): 页错误数。
 - `pageins` (macOS): 实际页面的数量。
 
-对于 Windows 字段的解释依赖于 [PROCESS_MEMORY_COUNTERS_EX][PROCESS_MEMORY_COUNTERS_EX] 结构文档。 Linux 上的示例：
-
-[PROCESS_MEMORY_COUNTERS_EX]: https://docs.microsoft.com/en-us/windows/desktop/api/psapi/ns-psapi-_process_memory_counters_ex "process memory counters ex"
+对于 Windows 字段的解释依赖于 [PROCESS_MEMORY_COUNTERS_EX] 结构文档。 Linux 上的示例：
 
 ```python
 >>> import psutil
@@ -44,6 +44,6 @@ pmem(rss=15491072, vms=84025344, shared=5206016, text=2555904, lib=0, data=98918
 
 **Process.memory_info_ex()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.memory_info_ex) <a name="Process.memory_info_ex" ></a>
 
-与 [memory_info()](#Process.memory_info) 相同（已弃用）。
+与 [memory_info()] 相同（已弃用）。
 
-***⚠️警告**:*在 4.0.0 版本中已弃用；使用 [memory_info()](#Process.memory_info) 替换.*
+***⚠️警告**:*在 4.0.0 版本中已弃用；使用 [memory_info()] 替换.*

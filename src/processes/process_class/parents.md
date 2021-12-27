@@ -1,8 +1,10 @@
 # 父进程列表
 
+{{#include ../../links.md}}
+
 **Process.parents()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.parents) <a name="Process.parents" ></a>
 
-以列表形式返回当前进程的所有父进程的实例方法, 如果没有父进程，返回空列表。同样参考 [ppid()](#Process.ppid) 和 [parent()](#Process.parent) 方法.
+以列表形式返回当前进程的所有父进程的实例方法, 如果没有父进程，返回空列表。同样参考 [ppid()] 和 [parent()] 方法.
 
 译注例子:
 

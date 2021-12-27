@@ -1,12 +1,12 @@
 # cpu时间
 
+{{#include ../../links.md}}
+
 **Process.cpu_times()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.cpu_times) <a name="Process.cpu_times" ></a>
 
 Return a named tuple representing the accumulated process times, in seconds (see explanation). This is similar to os.times but can be used for any process PID.
 
-返回一个命名元组，表示累计处理时间，以秒为单位（见[解释](http://stackoverflow.com/questions/556405/)）。 这类似于 [os.times][os.times] 但可用于任何进程 PID。
-
-[os.times]: https://docs.python.org/zh-cn/library/os.html#os.times "os.times"
+返回一个命名元组，表示累计处理时间，以秒为单位（见[解释](http://stackoverflow.com/questions/556405/)）。 这类似于 [os.times] 但可用于任何进程 PID。
 
 - `user`: 在用户模式下花费的时间。
 - `system`: 在内核模式中花费的时间。

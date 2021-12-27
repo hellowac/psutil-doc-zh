@@ -2,7 +2,7 @@
 
 **psutil.pids()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.pids) <a name="psutil.pids"></a>
 
-返回当前正在运行的**进程ID**(PID)的排序列表。 迭代所有进程并避免竞争条件 [process_iter()](#psutil.process_iter) 应该是首选。
+返回当前正在运行的**进程ID**(PID)的排序列表。 迭代所有进程并避免竞争条件 [process_iter()] 应该是首选。
 
 ```python
 >>> import psutil

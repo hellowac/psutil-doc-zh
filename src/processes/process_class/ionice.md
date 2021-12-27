@@ -1,12 +1,12 @@
 # I/O优先级
 
+{{#include ../../links.md}}
+
 **Process.ionice(ioclass=None, value=None)** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.ionice) <a name="Process.ionice" ></a>
 
 获取或设置进程的I/O良好度(优先级)。如果没有提供参数，它作为一个 get，在 Linux 上返回一个 `(ioclass, value)` 元组，在 Windows 上返回一个 ***ioclass*** 整数。如果提供了 ***ioclass*** ，它将作为一个集合。 在这种情况下，只能在 Linux 上指定一个附加值(***value***)，以便进一步提高或降低 I/O 优先级。下面是与平台相关的 ***ioclass*** 值。
 
-Linux (参阅 [ioprio_get][ioprio_get]手册):
-
-[ioprio_get]: https://linux.die.net/man/2/ioprio_get  "获取I/O优先级值手册"
+Linux (参阅 [ioprio_get]手册):
 
 - `IOPRIO_CLASS_RT`: (高) 该进程每次都首先访问磁盘。 小心使用它，因为它会使整个系统挨饿。 可以指定额外的优先级，范围从 `0`（最高）到 `7`（最低）。
 - `IOPRIO_CLASS_BE`: (一般) 未设置特定 I/O 优先级的任何进程的默认值。 附加优先级范围从 `0`（最高）到 `7`（最低）。

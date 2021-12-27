@@ -1,17 +1,17 @@
 # 网络连接
 
+{{#include ../../links.md}}
+
 **Process.connections(kind="inet")** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.connections) <a name="Process.connections" ></a>
 
-将进程打开的socket连接作为命名元组列表返回。要获得系统范围的连接，请使用 [psutil.net_connections()](#psutil.net_connections)。 每个命名元组提供 6 个属性：
+将进程打开的socket连接作为命名元组列表返回。要获得系统范围的连接，请使用 [psutil.net_connections()]。 每个命名元组提供 6 个属性：
 
-- `fd`: 套接字文件描述符。 这可以传递给 [socket.fromfd][socket.fromfd] 以获得可用的套接字对象。在 Windows、FreeBSD 和 SunOS 上，它始终设置为 -1。
-- `family`: 地址族，[AF_INET][AF_INET]、[AF_INET6][AF_INET6] 或 [AF_UNIX][AF_UNIX] 。
-- `type`: 地址类型，[SOCK_STREAM][SOCK_STREAM] 、[SOCK_DGRAM][SOCK_DGRAM] 或 [SOCK_SEQPACKET][SOCK_SEQPACKET] 。
-- `laddr`: 在 [AF_UNIX][AF_UNIX] 套接字的情况下，本地地址作为 `(ip, port)` 命名元组或路径。 对于 UNIX 套接字，请参阅下面的注释。
+- `fd`: 套接字文件描述符。 这可以传递给 [socket.fromfd] 以获得可用的套接字对象。在 Windows、FreeBSD 和 SunOS 上，它始终设置为 -1。
+- `family`: 地址族，[AF_INET]、[AF_INET6] 或 [AF_UNIX] 。
+- `type`: 地址类型，[SOCK_STREAM] 、[SOCK_DGRAM] 或 [SOCK_SEQPACKET] 。
+- `laddr`: 在 [AF_UNIX] 套接字的情况下，本地地址作为 `(ip, port)` 命名元组或路径。 对于 UNIX 套接字，请参阅下面的注释。
 - `raddr`: 在 UNIX 套接字的情况下，远程地址作为`(ip, port)` 命名元组或绝对路径。 当远程端点未连接时，您将获得一个空元组 (**AF_INET\***) 或 `""` (**AF_UNIX**)。 对于 UNIX 套接字，请参阅下面的注释。
-- `status`: 表示 TCP 连接的状态。 返回值是 [psutil.CONN_*](#connections-constants) 常量之一。 对于 UDP 和 UNIX 套接字，这始终是 [psutil.CONN_NONE](#psutil.CONN_NONE)。
-
-[socket.fromfd]: https://docs.python.org/zh-cn/3/library/socket.html#socket.fromfd "socket.fromfd"
+- `status`: 表示 TCP 连接的状态。 返回值是 [psutil.CONN_*] 常量之一。 对于 UDP 和 UNIX 套接字，这始终是 [psutil.CONN_NONE]。
 
 ***kind*** 参数是一个字符串，用于过滤符合以下条件的连接：
 
@@ -49,6 +49,6 @@ pconn(fd=123, family=<AddressFamily.AF_INET: 2>, type=<SocketType.SOCK_STREAM: 1
 
 **注释**: (OpenBSD) *UNIX 套接字的“**laddr**”和“**raddr**”字段始终设置为`“”`。 这是操作系统的限制。*
 
-**注释**: (AIX) [psutil.AccessDenied](#psutil.AccessDenied) 异常总是抛出，除非以 `root` 身份运行（`lsof` 也是如此）。
+**注释**: (AIX) [psutil.AccessDenied] 异常总是抛出，除非以 `root` 身份运行（`lsof` 也是如此）。
 
 *5.3.0 版本中修改: : “**laddr**”和“**raddr**”被命名为元组。*

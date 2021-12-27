@@ -1,11 +1,13 @@
 # win服务类
 
+{{#include ../links.md}}
+
 `class` **psutil.WindowsService** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService)
 
-表示具有给定名称的 Windows 服务。 此类由 [win_service_iter()](#psutil.win_service_iter) 和 [win_service_get()](#psutil.win_service_get) 函数返回，不应直接实例化。
+表示具有给定名称的 Windows 服务。 此类由 [win_service_iter()] 和 [win_service_get()] 函数返回，不应直接实例化。
 
 - `name`() - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService.name)
-    服务名称. 此字符串是引用服务的方式，可以传递给 [win_service_get()](#psutil.win_service_get) 获取一个新的 WindowsService 实例。
+    服务名称. 此字符串是引用服务的方式，可以传递给 [win_service_get()] 获取一个新的 WindowsService 实例。
 - `display_name`() - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService.display_name)
     服务显示名称。当这个类被实例化时，该值被缓存。
 - `binpath`() - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService.binpath)
@@ -15,7 +17,7 @@
 - `start_type`() - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService.start_type)
     一个字符串，可以是“自动”(automatic)、“手动”(manual)或“禁用”(disabled)。
 - `pid`() - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService.pid)
-    进程 PID，如果有，否则为 `None` 。 这可以传递给 [Process](#psutil.Process) 类来控制服务的进程。
+    进程 PID，如果有，否则为 `None` 。 这可以传递给 [Process] 类来控制服务的进程。
 - `status`() - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService.status)
     服务状态为字符串，可以是“running”、“paused”、“start_pending”、“pause_pending”、“continue_pending”、“stop_pending”或“stopped”。
 - `description`() - [原文](https://psutil.readthedocs.io/en/latest/#psutil.WindowsService.description)

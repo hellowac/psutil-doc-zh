@@ -1,11 +1,6 @@
 # 异常
 
-[Process]: ../process_class/index.html
-[Process.name()]: ../process_class/name.md
-[Process.ppid()]: ../process_class/ppid.md
-[Process.name()]: ../process_class/name.md
-[Process.wait()]: ../process_class/wait.md
-[process_iter()]: ../functions/process_iter.md
+{{#include ../../links.md}}
 
 ## **异常基类**
 

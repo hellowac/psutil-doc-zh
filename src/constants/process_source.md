@@ -1,5 +1,7 @@
 # 进程资源
 
+{{#include ../links.md}}
+
 参考: [原文](https://psutil.readthedocs.io/en/latest/#process-resources-constants)
 
 - **Linux** / **FreeBSD**:
@@ -26,7 +28,7 @@
   - psutil.**RLIMIT_SBSIZE**
   - psutil.**RLIMIT_NPTS**
 
-用于获取和设置与 [psutil.Process.rlimit()](#Process.rlimit) 结合使用的进程资源限制的常量。 有关更多信息，请参阅 [resource.getrlimit][resource.getrlimit]。
+用于获取和设置与 [psutil.Process.rlimit()][Process.rlimit()] 结合使用的进程资源限制的常量。 有关更多信息，请参阅 [resource.getrlimit]。
 
 *可用平台: Linux, FreeBSD.*
 

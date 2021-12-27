@@ -1,6 +1,5 @@
 # 环境变量
 
-
 **Process.environ()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.environ) <a name="Process.environ" ></a>
 
 进程的作为字典的环境变量。 **注意**：这可能不会反映进程开始后所做的更改。

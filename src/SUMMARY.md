@@ -33,7 +33,7 @@
     - [网络连接信息](system/network/net_if_addrs.md)
     - [网卡状态](system/network/net_if_stats.md)
   - [传感器](system/Sensors/readme.md)
-    - [温度](system/Sensors/sensors_temperatures`.md)
+    - [温度](system/Sensors/sensors_temperatures.md)
     - [风扇](system/Sensors/sensors_fans.md)
     - [电池](system/Sensors/sensors_battery.md)
   - [其他系统信息](system/other/readme.md)
@@ -115,3 +115,7 @@
 - [开发指南](deveplotment/readme.md)
 - [平台支持历史](history/readme.md)
 - [时间线](timeline/readme.md)
+
+----
+
+[相关项目](related_pro.md)

@@ -1,8 +1,10 @@
 # 按名称查找进程
 
+{{#include ../links.md}}
+
 参考: [原文](https://psutil.readthedocs.io/en/latest/#find-process-by-name)
 
-根据 [Process.name()](#Process.name) 核查字符串：
+根据 [Process.name()] 核查字符串：
 
 ```python
 import psutil
@@ -16,7 +18,7 @@ def find_procs_by_name(name):
     return ls
 ```
 
-更高级一点，根据 [Process.name()](#Process.name)、[Process.exe()](#Process.exe) 和 [Process.cmdline()](#Process.cmdline) 检查字符串：
+更高级一点，根据 [Process.name()]、[Process.exe()] 和 [Process.cmdline()] 检查字符串：
 
 ```python
 import os

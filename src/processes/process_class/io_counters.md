@@ -1,10 +1,10 @@
 # I/O统计
 
+{{#include ../../links.md}}
+
 **Process.io_counters()** - [原文](https://psutil.readthedocs.io/en/latest/#psutil.Process.io_counters) <a name="Process.io_counters" ></a>
 
-返回以命名元组形式的进程I/O分析数据，在liunx平台上可以参考 [/proc 文件系统文档][proce filesystem document]。
-
-[proce filesystem document]: https://stackoverflow.com/questions/3633286/what-do-the-counters-in-proc-pid-io-mean "What do the counters in /proc/[pid]/io mean?"
+返回以命名元组形式的进程I/O分析数据，在liunx平台上可以参考 [/proc 文件系统文档][proce_filesystem_document]。
 
 - `read_count`: 执行的读取操作数（累计）。 这应该计算的是与读取相关的系统调用的数量，例如 UNIX 上的 `read()` 和 `pread()`。
 - `write_count`: 执行的写入操作数（累计）。 这应该计算的是与写入相关的系统调用的数量，例如 UNIX 上的 `write()` 和 `pwrite()`。

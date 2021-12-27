@@ -1,5 +1,7 @@
 # 进程状态
 
+{{#include ../links.md}}
+
 参考: [原文](https://psutil.readthedocs.io/en/latest/#process-status-constants)
 
 - psutil.**STATUS_RUNNING**
@@ -16,6 +18,6 @@
 - psutil.**STATUS_LOCKED)**(_FreeBSD_)
 - psutil.**STATUS_WAITING)**(_FreeBSD_)
 - psutil.**STATUS_SUSPENDED)**(_NetBSD_
-  表示进程状态。 由 [psutil.Process.status()](#Process.status) 返回。
+  表示进程状态。 由 [psutil.Process.status()][Process.status()] 返回。
   *3.4.1 版本中新增: STATUS_SUSPENDED (NetBSD).*
   *5.4.7 版本中新增: STATUS_PARKED (Linux).*
